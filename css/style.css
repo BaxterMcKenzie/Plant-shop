@@ -18,7 +18,7 @@ body {
   display: flex;
   align-items: top;
   justify-content: center;
-  height: 500px;
+  height: 450px;
   background-image: url(/img/hero-background-2.webp);
   background-size: cover;
 }
@@ -41,15 +41,38 @@ h1 {
 /* CARDS */
 .results {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 100%;
   gap: 20px;
 }
 
 .card {
-  border: rgb(0, 0, 0) solid 4px;
+  border: rgb(255, 0, 157) solid 4px;
   width: 100%;
   transition: all 150ms ease-in-out;
+}
+
+.card-details {
+  background-color: rgb(255, 246, 189);
+  padding: 10px;
+  font-family: Helvetica, sans-serif;
+  color: rgb(10, 60, 11);
+}
+.card-details h3 {
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+.card-details h4 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.card-details h5 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.card-details h6 {
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .card:hover {
@@ -57,25 +80,20 @@ h1 {
 }
 
 .card img {
-  background-color: white;
-  border-top-left-radius: 30px;
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 20px;
+  padding: 5px;
 }
 
 /* SWIPER CSS */
 .swiper {
-  height: 450px;
+  height: 300px;
 }
 
 .swiper-pagination {
   padding: 4px;
-  background-image: linear-gradient(45deg, rgb(255, 2, 209), rgb(69, 255, 112));
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: rgb(23, 79, 23);
   border-radius: 16px;
 }
 
@@ -86,7 +104,7 @@ h1 {
 }
 
 .swiper-pagination-bullet:active {
-  background-color: rgb(126, 126, 126);
+  background-color: rgb(0, 255, 102);
 }
 
 /* SWIPER CSS END */

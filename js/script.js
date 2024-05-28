@@ -7,26 +7,22 @@ $(document).ready(function () {
     // ALL JS is placed inside of here
 
     const products = [{
-      brand: 'DARKSTAR',
-      price: '$49.99',
-      name: 'Collapse Pink Deck',
-      width: '8.0 x 31.62',
+      name: 'OX TONGUE',
+      price: '$16.41',
+      type: 'Succulent',
+      care: '<i class="fa-solid fa-leaf"></i>',
       image: [{
           imageName: 'Image 1 Alt',
-          imageSrc: './img/collapsepinkdeck.webp',
+          imageSrc: './img/ox-tongue.webp',
         },
         {
           imageName: 'Image 2 Alt',
-          imageSrc: './img/collapsepinkback.webp',
-        },
-        {
-          imageName: 'Image 3 Alt',
-          imageSrc: './img/collapsepinkside.webp',
+          imageSrc: './img/ox-tongue2.webp',
         }
       ]
     },
 
-]
+];
 
 // -------- HTML ELEMENTS & SETTING AS GLOBAL SCOPED --------
 
@@ -50,20 +46,19 @@ for (let i = 0; i < array.length; i++) {
               <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="${array[i].image[0].imageSrc}" alt="${array[i].image[0].imageName} image 1"></div>
                 <div class="swiper-slide"><img src="${array[i].image[1].imageSrc}" alt="${array[i].image[1].imageName} image 2"></div>
-                <div class="swiper-slide"><img src="${array[i].image[2].imageSrc}" alt="${array[i].image[2].imageName} image 3"></div>
               </div>
               <div class="swiper-pagination"></div>
           </div>
               <div class="card-details">
-                  <h3>${array[i].brand}</h3>
-                  <h4>${array[i].name}</h4>
-                  <h6> Width: ${array[i].width}</h6>
-                  <h5> Price: ${array[i].price}</h5>
+                  <h3>${array[i].name}</h3>
+                  <h4>${array[i].type}</h4>
+                  <h5>${array[i].price}</h5>
+                  <h6> Care Level: ${array[i].care}</h6>
               </div>
           </div>
-      `
+      `;
 
-  $('#results').append(productcard)
+  $('#results').append(productcard);
 
   // Re-initialize Swiper Instances
   const swipers = document.querySelectorAll('.swiper');
