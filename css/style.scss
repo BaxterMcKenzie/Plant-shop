@@ -1,4 +1,5 @@
-// @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
     padding: 0;
@@ -6,120 +7,263 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(255, 254, 239);
+// Section 1
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section:nth-child(1) {
+    background-image: url(/img/plant-background.webp);
+    background-position: right;
+    background-size: cover;
+
+    .fp-overflow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: red 5px solid;
+        background-color: rgba($color: #ffffff, $alpha: .4);
+        padding: 30px;
+    }
+}
+
+.text-overlay span {
+    font-style: italic;
+}
+
+// Section 1 end
+// Slide 1
+
+/* Slide 1 styling */
+
+.slide:nth-child(1) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-.header-hero {
-    width: 100%;
-    border: 5px green solid;
+form {
     display: flex;
-    align-items: top;
-    justify-content: center;
-    height: 450px;
-    background-image: url(/img/hero-background-2.webp);
-    background-size: cover;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 60px;
 }
 
-h1 {
+input {
+    font-family: "Josefin Sans", sans-serif;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 15px;
+    border: 2px rgb(0, 48, 0) solid ;
+}
+
+button {
+    font-family: "Josefin Sans", sans-serif;
+    padding: 10px;
+    background-color: rgb(0, 48, 0);;
+    color: rgb(255, 239, 239);
+    border: 2px white solid;
+}
+
+#formMessage {
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: red;
+}
+
+// Slide 1 end
+
+
+/* Go To Buttons */
+.navigation-buttons {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    z-index: 100;
+}
+
+.navigation-buttons button {
+    display: block;
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: black;
+    color: #ff1900;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Go To Buttons */
+.slide-buttons {
+    position: fixed;
+    top: 100px;
+    left: 300px;
+    z-index: 100;
+}
+
+.slide-buttons button {
+    display: block;
+    border: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: black;
+    color: #ff1900;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+
+h2 {
     font-family: "Yeseva One", serif;
     font-size: 80px;
-    margin-top: 100px;
+    color: rgb(0, 48, 0);
 }
 
-.body-container {
-    border: 2px solid green;
-    margin-top: 20px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h2:nth-child(1) {
+    font-family: "Yeseva One", serif;
 }
 
-/* CARDS */
 
-.results {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+// // Slide 2
+
+.section:nth-child(2) {
+
+        .header-hero {
+        padding: 10px;
+        width: 100%;
+        border: 5px green solid;
+        display: flex;
+        align-items: top;
+        justify-content: center;
+        background-image: url(/img/hero-background-2.webp);
+        background-size: cover;
+        background-position: right;
+        height: 600px;
+
+        span {
+            font-style: italic;
+        }
+    }
+
+    h1 {
+        font-family: "Yeseva One", serif;
+        font-size: 80px;
+        margin-top: 100px;
+        color: rgb(0, 48, 0);
+    }
+
+    .body-container {
+        border: 2px solid green;
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fp-overflow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: #ff1900 2px solid;
+        width: 100%;
+    }
+}
+
+.filters {
     width: 100%;
-    gap: 20px;
+    height: 100px;
+    background-color: aqua;
 }
 
-.card {
-    border: rgb(255, 0, 157) solid 4px;
-    width: 100%;
-    transition: all 150ms ease-in-out;
-}
+    /* CARDS */
 
-.card-details {
-    background-color: rgb(255, 246, 189);
-    padding: 10px;
-    font-family: Helvetica, sans-serif;
-    color: rgb(10, 60, 11);
-
-    h3 {
+    .results {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+        gap: 20px;
+    }
+    
+    .card {
+        border: rgb(255, 0, 157) solid 4px;
+        width: 100%;
+        transition: all 150ms ease-in-out;
+        overflow: hidden;  /* Add this line to ensure the card content doesn't overflow */
+    }
+    
+    .card-details {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url(/img/hero-background.webp);
+        background-size: cover;
+        padding: 20px;
+        font-family: "Josefin Sans", sans-serif;
+        color: rgb(10, 60, 11);
+    }
+    
+    .card-details h3 {
         font-size: 20px;
         margin-bottom: 1px;
     }
-
-    h4 {
+    
+    .card-details h4 {
         font-size: 15px;
         margin-bottom: 5px;
     }
-
-    h5 {
+    
+    .card-details h5 {
         font-size: 16px;
         margin-bottom: 5px;
     }
-
-    h6 {
+    
+    .card-details h6 {
         font-size: 16px;
         margin-bottom: 5px;
     }
-}
-
-// //                   <h3>${array[i].name}</h3>
-//                   <h4>${array[i].type}</h4>
-//                   <h6> Care Level: ${array[i].care}</h6>
-//                   <h5> Price: ${array[i].price}</h5>
-
-.card:hover {
-    transform: scale(1.02);
-}
-
-
-.card img {
-    width: 100%;
-    object-fit: cover;
-    padding: 5px;
-}
+    
+    .card:hover {
+        transform: scale(1.02);
+    }
+    
+    .card img {
+        width: 100%;
+        height: auto;  /* Ensure the image maintains its aspect ratio */
+        object-fit: contain;  /* Adjust this if needed (cover, fill, etc.) */
+        display: block;  /* Remove any extra space below the image */
+    }
 
 
-/* SWIPER CSS */
+    /* SWIPER CSS */
 
-.swiper {
-    height: 300px;
-}
+    .swiper {
+        height: 300px;
+    }
 
-.swiper-pagination {
-    padding: 4px;
-    background-color: rgb(23, 79, 23);
-    border-radius: 16px
-}
+    .swiper-pagination {
+        padding: 4px;
+        background-color: rgb(23, 79, 23);
+        border-radius: 16px
+    }
 
-.swiper-pagination-bullet {
-    background-color: rgb(219, 219, 219);
-    width: 10px;
-    height: 10px;
-}
+    .swiper-pagination-bullet {
+        background-color: rgb(219, 219, 219);
+        width: 10px;
+        height: 10px;
+    }
 
-.swiper-pagination-bullet:active {
-    background-color: rgb(0, 255, 102);
-}
+    .swiper-pagination-bullet:active {
+        background-color: rgb(0, 255, 102);
+    }
+
 
 /* SWIPER CSS END */
 
@@ -132,7 +276,7 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
-    
+
 }
 
 
