@@ -32,48 +32,115 @@
                     <h2>Patricia's <span>Pretty</span></h2>
                     <h2>Plant Palace</h2>
                 </div>
-                <form id="signupForm">
-                    <input type="text" id="username" placeholder="Username" required>
-                    <input type="password" id="password" placeholder="Password" required>
-                    <input type="text" id="yesNo" placeholder="Do you like plants? Yes or No?" required>
-                    <button id="submitButton">Sign Up</button>
-                </form>
+                <div class="form-container">
+                    <form id="signupForm">
+                        <input type="text" id="username" placeholder="Username" required>
+                        <input type="password" id="password" placeholder="Password" required>
+                        <input type="text" id="yesNo" placeholder="Do you like plants? Yes or No?" required>
+                        <button id="submitButton">Sign Up</button>
+                        <button id="goToSection2">Skip</button>
+                    </form>
+                </div>
                 <div id="formMessage"></div>
             </div>
         </div>
 
         <div class="section">
             <div class="slide" id="slide2">
-                    <!-- Header -->
-                    <div class="header-hero">
-                        <h1>Patricia's <span>Pretty</span> Plant Palace</h1>
+                <!-- Header -->
+                <div class="header-hero">
+                    <h1>Patricia's <span>Pretty</span></h1>
+                    <h1>Plant Palace</h1>
+                </div>
+                <!-- End of Header -->
+
+                <div class="filter-container">
+                    <div class="filters">
+                        <h2>Filter<br></h2>
+                        <div class="filter-holder">
+    
+                            <select name="type" id="type-filter" class="full-width-select">
+                                <!-- Options for the select & a value -->
+                                <option value="">Type</option>
+                                <option value="Succulent">Succulent</option>
+                                <option value="Foliage">Foliage</option>
+                                <option value="Ficus">Ficus</option>
+                                <option value="Bonsai">Bonsai</option>
+                                <option value="Native Shrub">Native Shrub</option>
+                                <!-- Add the rest of the options -->
+                            </select>
+    
+                            <select name="priceMin" id="priceMin" class="full-width-select">
+                                <!-- Options for the select & a value -->
+                                <option value="">$ Min</option>
+                                <option value="10">$10</option>
+                                <option value="20">$20</option>
+                                <option value="30">$30</option>
+                                <option value="40">$40</option>
+                                <option value="50">$50</option>
+                                <option value="60">$60</option>
+                                <option value="70">$70</option>
+                                <option value="80">$80</option>
+                                <option value="90">$90</option>
+                                <option value="100">$100+</option>
+                                <!-- Add the rest of the options -->
+                            </select>
+    
+                            <select name="priceMax" id="priceMax" class="full-width-select">
+                                <!-- Options for the select & a value -->
+                                <option value="">$ Max</option>
+                                <option value="10">$10</option>
+                                <option value="20">$20</option>
+                                <option value="30">$30</option>
+                                <option value="40">$40</option>
+                                <option value="50">$50</option>
+                                <option value="60">$60</option>
+                                <option value="70">$70</option>
+                                <option value="80">$80</option>
+                                <option value="90">$90</option>
+                                <option value="100">$100+</option>
+                                <!-- Add the rest of the options -->
+                            </select>
+    
+                        </div>
+    
                     </div>
-                    <!-- End of Header -->
 
                     <div class="filters">
-                        
-                    </div>
-
-                    <!-- Body Container -->
-                    <div class="body-container">
-                        <div class="results" id="results">
+                        <div>
+                            <h2>Sort <br></h2>
+                        </div>
+                        <div class="button-holder">
+                            <button id="price-low">$ Low</button>
+                            <button id="price-high">$ High</button>
+                            <button id="a-z">A - Z</button>
                         </div>
                     </div>
-                    <!-- End of Body container -->
                 </div>
+
+                <!-- Body Container -->
+                <div class="body-container">
+                    <div class="results" id="results">
+                    </div>
+                </div>
+                <!-- End of Body container -->
             </div>
+            <dialog id="details-modal">
+                <div class="modal-contents"></div>
+            </dialog>
         </div>
+    </div>
     </div>
 
     <!-- Fixed Buttons to go to different sections -->
     <div class="navigation-buttons">
         <button id="goToSection1">Go to Section 1</button>
-        <button id="goToSection2">Go to Section 2</button>
     </div>
 
     <!-- Fixed Buttons to go to different slides (Section 1) -->
     <div class="slide-buttons">
     </div>
+
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
