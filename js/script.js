@@ -46,7 +46,7 @@ $(document).ready(function () {
         const yesNo = $('#yesNo').val();
 
         if (!usernameRegex.test(username)) {
-            $('#formMessage').html('<p>Invalid username. Must be 3-15 characters long and contain only letters, numbers, and underscores.</p>');
+            $('#formMessage').html('<p>Invalid username. Must be 3-15 characters long and  contain only letters, numbers, and underscores.</p>');
         } else if (!passwordRegex.test(password)) {
             $('#formMessage').html('<p>Password must be at least 8 characters long and contain both letters and numbers.</p>');
         } else if (!yesNoRegex.test(yesNo)) {

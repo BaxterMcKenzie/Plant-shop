@@ -58,6 +58,8 @@ form {
     margin-top: 10px;
 }
 
+
+
 input {
     font-family: "Josefin Sans", sans-serif;
     margin: 10px 0;
@@ -80,6 +82,11 @@ button {
     font-size: 18px;
     font-weight: 800;
     color: red;
+    // width: 60%;
+}
+
+#formMessage p {
+    width: 300px;
 }
 
 // Slide 1 end
@@ -140,6 +147,7 @@ h2:nth-child(1) {
 .header-hero::before {
     animation: rotating 10s linear infinite;
 }
+
     
     .header-hero span {
         color: rgb(23, 167, 25);
@@ -247,6 +255,13 @@ h2:nth-child(1) {
     background: url(/img/plants.svg) top/cover no-repeat;
     opacity: 0.2; /* Adjust the opacity value as needed */
     z-index: 1;
+    transition: ease-in-out 2s;
+}
+
+.filters:hover:before {
+    transform: scale(1.1);
+    opacity: 0.5;
+
 }
 
 .filters * {
@@ -296,21 +311,6 @@ h2:nth-child(1) {
 }
 
     /* CARDS */
-
-    @keyframes jiggle {
-        0%, 100% {
-            transform: rotate(0deg);
-        }
-        25% {
-            transform: rotate(1deg);
-        }
-        50% {
-            transform: rotate(-1deg);
-        }
-        75% {
-            transform: rotate(1deg);
-        }
-    }
     
     #results {
         display: grid;
@@ -325,17 +325,31 @@ h2:nth-child(1) {
         border: rgb(10, 60, 11) solid 2px;
         border-radius: 22px;
         width: 100%;
-        transition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out;
         overflow: hidden;
         margin-bottom: 20px;
         box-shadow: 4px 3px 13px 1px rgba(0, 0, 0, 0.56);
         -webkit-box-shadow: 4px 3px 13px 1px rgba(0, 0, 0, 0.56);
         -moz-box-shadow: 4px 3px 13px 1px rgba(0, 0, 0, 0.56);
-        transform: translateZ(0); /* Add this line */
+        transition: transform 0.5s ease-in-out;
     }
+
+    // @keyframes jiggle {
+    //     0%, 100% {
+    //         transform: rotate(0deg);
+    //     }
+    //     25% {
+    //         transform: rotate(1deg);
+    //     }
+    //     50% {
+    //         transform: rotate(-1deg);
+    //     }
+    //     75% {
+    //         transform: rotate(1deg);
+    //     }
+    // }
     
     .card:hover {
-        animation: jiggle 0.5s ease-in-out;
+        transform: rotate(-1deg);
     }
     
     .card-details {
@@ -360,6 +374,13 @@ h2:nth-child(1) {
         background: url(/img/plants.svg) top/200% 200% no-repeat;
         opacity: 0.2; /* Adjust the opacity value as needed */
         z-index: 1;
+        transition: ease-in-out 2s;
+
+    }
+
+    .card-details:hover:before {
+    transform: scale(1.1);
+    opacity: 0.5;
     }
     
     .card-details * {
@@ -556,6 +577,7 @@ dialog::backdrop {
     opacity: 0.2; /* Adjust the opacity value as needed */
     z-index: 1;
 }
+
 
 .plant-care * {
     position: relative;
